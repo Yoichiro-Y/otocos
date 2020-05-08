@@ -17,18 +17,14 @@
     </div>
   </div>
 <% else %>
-<div class="center jumbotron">
-  <h1>Welcome to the Sample App</h1>
-
-  <h2>
-    This is the home page for the
-    <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-    sample application.
-  </h2>
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-</div>
-
-<%= link_to image_tag("rails.svg", alt: "Rails logo", width: "200px"),
-                      "https://rubyonrails.org/" %>
+  <div class="center explain">
+    <h1>Welcome to FLYB !</h1>
+    <p>FLYB(フライビー)は男性向けの化粧品・コスメの口コミ情報サイトです。</p>
+    <p>あなたにあった化粧品を見つけましょう！</p>
+    <ul class="home-btns">
+        <li><%= link_to "カテゴリ", users_path , class: "home-btn"%></li>
+        <li><%= link_to "ランキング", users_path, class: "home-btn" %></li>
+        <li><%= link_to "新着コスメ", users_path, class: "home-btn" %></li>
+    </ul>
+  </div>
 <% end %>
