@@ -13,6 +13,12 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+.default-link{
+  color:#ffcc00;
+  text-decoration: none;
+  &:hover{color:f0821e;}
+}
+
 body {
   padding-top: 60px;
 }
@@ -343,4 +349,19 @@ span.image {
       background-image: linear-gradient(45deg, #FFC107 0%, #f76a35 100%);
    }
   }
+}
+
+
+.btn-center{
+  padding:0 auto;
+}
+
+.dropdown{
+   border-right:solid 2px #f111;
+   &:focus{
+     background-color:#ffcc00;
+   }
+   span{
+    color:white;
+   }
 }

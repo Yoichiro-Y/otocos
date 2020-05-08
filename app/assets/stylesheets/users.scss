@@ -11,3 +11,20 @@
     border-bottom: 1px solid gray-lighter;
   }
 }
+.btn-signup{
+  padding:0 auto;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  background-image: linear-gradient(-90deg, #FF006E, #FFD500);
+  transition: .5s;
+  background-size: 200%;
+  margin-top:20px;
+}
+.row{
+  color:#f0b21e;
+}
