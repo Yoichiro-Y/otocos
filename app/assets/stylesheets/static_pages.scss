@@ -25,6 +25,7 @@
   background-image: linear-gradient(-90deg, #FF006E, #FFD500);
   transition: .5s;
   background-size: 200%;
+  &:visited { color:white; text-decoration:none; }
 }
 
 .btn-gradation:hover {

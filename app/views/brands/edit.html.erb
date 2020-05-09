@@ -1,0 +1,10 @@
+<%= form_tag("/users/#{@brand.id}/update", {multipart: true}) do %>
+          <%= render 'shared/error_messages' %>
+          <p>ブランド名</p>
+          <input name="name" value="<%= @brand.name %>">
+          <p>画像</p>
+          <input name="image" type="file">
+          <p>説明</p>
+          <textarea name="explain" value="<%= @brand.explain %>"></textarea>
+          <textarea type="submit" value="保存">
+ <% end %>

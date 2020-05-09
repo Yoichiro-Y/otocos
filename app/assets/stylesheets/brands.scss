@@ -1,0 +1,31 @@
+.brand{
+   .content {
+    display: block;
+    
+    img {
+      display: block;
+      padding: 5px auto;
+      margin-left:140px;
+      width:30%;
+    }
+    ul {
+    display:block;
+    float: left;
+    list-style: none;
+    }
+    .brand-name{
+        color:#151e19;
+        font-size:20px;
+        border-bottom:1px solid #ffcc00;
+        padding-bottom:3px;
+        margin-bottom:2px;
+    }
+    .brand-explain{
+        color:#636561;
+        font-size:14px;
+        line-height: 17px;
+        letter-spacing:2px;
+        
+    }
+  }
+}
