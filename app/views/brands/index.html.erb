@@ -1,0 +1,16 @@
+<% provide(:title, 'ブランド一覧') %>
+<h1>ブランド一覧</h1>
+
+
+
+
+<ul class="users brands">
+  <% @brands.each do |brand| %>
+    <ul>
+      <li class="brand-name"><%= brand.name %></li>
+      <div class="brand-explain"><%= image_tag brand.image_name if brand.image_name.attached? %><%= brand.explain %></div>
+      <li><%= link_to "#{brand.name}のページ","brands/#{brand.id}" %></li>
+    </ul>
+  <% end %>
+</ul>
+

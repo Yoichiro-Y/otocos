@@ -32,6 +32,10 @@ class BrandsController < ApplicationController
     end
   end
   
+  def index
+     @brands = Brand.all
+  end
+  
   private
     
     def admin_user
