@@ -1,0 +1,15 @@
+<% provide(:title, '商品') %>
+<h1>新着商品</h1>
+
+
+
+
+<ul class="users brands">
+  <% @products.each do |product| %>
+    <ul>
+      <li class="brand-name"><%= product.name %></li>
+      <div class="brand-explain"><%= image_tag product.image_name if product.image_name.attached? %><%= product.explain %></div>
+      <li><%= link_to "#{product.name}の口コミを見る","products/#{product.id}" %></li>
+    </ul>
+  <% end %>
+</ul>

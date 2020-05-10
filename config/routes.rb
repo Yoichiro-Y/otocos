@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   get  '/contact', to: 'static_pages#contact'
   get  '/signup',   to:'users#new'
   
+  post '/items/new',to:'items#create'
+  
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
-  
+
   
   resources :users do
     member do
@@ -20,9 +22,11 @@ Rails.application.routes.draw do
   end
   
   resources :users
+  resources :products
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
   resources :brands 
+
 end 

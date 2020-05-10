@@ -1,5 +1,7 @@
 <% if logged_in? %>
   <div class="row">
+    <div class="col-md-8">
+    </div>
     <aside class="col-md-4">
       <section class="user_info">
         <%= render 'shared/user_info' %>
@@ -7,14 +9,18 @@
       <section class="stats">
         <%= render 'shared/stats' %>
       </section>
-      <section class="micropost_form">
-        <%= render 'shared/micropost_form' %>
-      </section>
+      <div class="side-menu">
+        <p class="mini-title">口コミを探す</p>
+         <ul>
+          <li><%= link_to "> カテゴリーから探す","#" %></li>
+          <li><%= link_to "> ブランドから探す","brands_path" %></li>
+          <li><%= link_to "> ランキングから探す","#" %></li>
+          <li><%= link_to "> 新着商品から探す","products_path" %></li>
+          <li><%= link_to "> 記事から探す","#" %></li>
+          <li><%= link_to "> 注目商品から探す","#" %></li>
+        </ul>
+      </div>
     </aside>
-    <div class="col-md-8">
-      <h3>Micropost Feed</h3>
-      <%= render 'shared/feed' %>
-    </div>
   </div>
 <% else %>
   <div class="center explain">

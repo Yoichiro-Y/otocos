@@ -13,6 +13,10 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+.black{
+  color:black;
+}
+
 .default-link{
   color:#ffcc00;
   text-decoration: none;
@@ -213,6 +217,22 @@ aside {
 
 .users.follow {
   padding: 0;
+}
+
+.mini-title{
+  padding-top:40px;
+  margin-bottom:10px;
+  border-bottom:1px solid #ffcc00;
+}
+
+.side-menu{
+  li{
+    list-style: none;
+    &:hover{
+      text-decoration:none;
+    }
+  }
+  color:#ffcc00;
 }
 
 /* forms */

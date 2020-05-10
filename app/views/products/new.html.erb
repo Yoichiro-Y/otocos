@@ -1,13 +1,22 @@
-<% provide(:title, 'Add Brand') %>
+<% provide(:title, 'Add Product') %>
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_with(model: @brand, local: true) do |f| %>
+    <%= form_with(model: @product, local: true) do |f| %>
       <%= f.label :name %>
       <%= f.text_field :name %>
 
+      <%= f.label :category %>
+      <%= f.text_field :category %>
+      
       <%= f.label :explain %>
-      <%= f.text_field :explain %>
-
+      <%= f.text_area :explain %>
+      
+      <%= f.label :price %>
+      <%= f.number_field :price %>
+      
+      <%= f.label :brand_id %>
+      <%= f.number_field :brand_id %>
+      
       <span class="image">
           <%= f.file_field :image_name, accept: "image/jpeg,image/gif,image/png" %>
       </span>

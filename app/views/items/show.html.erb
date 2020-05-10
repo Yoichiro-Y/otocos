@@ -1,0 +1,26 @@
+
+<% provide(:title, @product.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="item_info">
+      <h1>
+        <%= image_tag @product.image_name %>
+        <span  class="name"><%= item.name %></span>
+        <span class="brand"><%= link_to item.brand.name, item.brand %></span>
+        <span  class="category"><%= item.category %></span>
+        <span  class="price"><%= item.price %></span>
+        <span class="content"><%= item.explain %></span>
+      </h1>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <%= render 'follow_form' if logged_in? %>
+    <% if @item.microposts.any? %>
+      <h3>口コミ (<%= @item.microposts.count %>件)</h3>
+      <ol class="microposts">
+        <%= render @microposts %>
+      </ol>
+      <%= will_paginate @microposts %>
+    <% end %>
+  </div>
+</div>
