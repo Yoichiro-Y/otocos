@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   def show
     @micropost=Micropost.new
     @product = Product.find(params[:id])
+    @microposts=@product.microposts.paginate(page: params[:page])
     @brand=Brand.find_by(id: @product.brand_id)
   end
 

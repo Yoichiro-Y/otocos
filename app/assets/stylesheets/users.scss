@@ -2,13 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 .users {
+  list-style: none;
+  margin: 0;
+  color:#80796c;
+  .container{
+    display:flex;
+  }
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid gray-lighter;
+  }
+  .brand-explain{
+    color:black;
+    font-family:serif;
+    margin-top:40px;
+    font-size:17px;
+  }
+  img{
+    width:250px;
+    margin:40px 60px 0 -20px;
+  }
+}
+
+.users-2 {
   list-style: none;
   margin: 0;
   li {
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid gray-lighter;
   }
 }
 .btn-signup{
@@ -26,5 +51,5 @@
   margin-top:20px;
 }
 .row{
-  color:#f0b21e;
+  color:#80796c;
 }

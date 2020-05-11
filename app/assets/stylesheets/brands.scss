@@ -1,12 +1,11 @@
 .brand{
    .content {
     display: block;
-    
     img {
       display: block;
       padding: 5px auto;
-      margin-left:140px;
-      width:30%;
+      margin-left:50px;
+      width:300px;
     }
     ul {
     display:block;
@@ -15,19 +14,19 @@
     }
     .brand-name{
         color:#151e19;
-        font-size:20px;
+        font-size:28px;
         border-bottom:1px solid #ffcc00;
-        padding-bottom:3px;
-        margin-bottom:2px;
+        padding:10px 0 10px 0;
+        margin-bottom:10px;
     }
     .brand-explain{
         color:#636561;
         font-size:14px;
         line-height: 17px;
-        letter-spacing:2px;
+        letter-spacing:3px;
         text-align:left;
         padding:2px;
-        
+        font-family:serif;
     }
   }
 }

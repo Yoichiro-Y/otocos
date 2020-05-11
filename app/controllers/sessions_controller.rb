@@ -26,4 +26,9 @@ class SessionsController < ApplicationController
     log_out if logged_in?
     redirect_to root_url
   end
+  def test
+    user=User.find_by(id: 2)
+    log_in user
+    redirect_to root_path
+  end
 end

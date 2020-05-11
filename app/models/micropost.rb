@@ -1,8 +1,9 @@
 class Micropost < ApplicationRecord
   belongs_to :user
-  belongs_to :products
+  belongs_to :product
   has_one_attached :image
   default_scope -> { self.order(created_at: :desc) }
+  validates :product_id,presence: true
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
   validates :image,   content_type: { in: %w[image/jpeg image/gif image/png],

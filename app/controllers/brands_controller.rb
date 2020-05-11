@@ -5,6 +5,7 @@ class BrandsController < ApplicationController
   
   def show
     @brand = Brand.find(params[:id])
+    @products = @brand.products.paginate(page: params[:page])
   end
 
   def new

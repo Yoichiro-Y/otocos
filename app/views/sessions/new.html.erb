@@ -18,8 +18,14 @@
         <span>パスワードを記憶する</span>
       <% end %>
 
-      <%= f.submit "ログイン", class: "btn-signup" %>
+      <%= f.submit "ログイン", class: "home-btn" %>
     <% end %>
+    
+    <p>
+    <%= link_to "テストユーザーでログイン",'/test',
+             method: :post,class:"default-link"
+    %>
+    </p>
 
     <p>アカウントをお持ちでない方はこちらから<%= link_to "新規登録", signup_path,class:"default-link" %>をしてください。</p>
   </div>

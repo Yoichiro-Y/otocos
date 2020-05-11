@@ -6,7 +6,7 @@
           <%= image_tag @product.image_name if @product.image_name.attached? %>
           <ul>
             <li  class="brand-name"><%= @product.name %></li>
-            <li class="brand-explain">ブランド　<%= link_to @brand.name, @brand %></li>
+            <li class="brand-explain">ブランド　<%= link_to @brand.name, @brand,class:"black" %></li>
             <li  class="brand-explain">カテゴリ　<%= @product.category %></li>
             <li class="brand-explain">参考価格　<%= @product.price %>円</li>
             <li class="brand-explain">
@@ -23,11 +23,10 @@
     <% if @product.microposts.any? %>
       <h3>口コミ (<%= @product.microposts.count %>件)</h3>
       <ol class="microposts">
+        <%= render @microposts %>
       </ol>
     <% else %>
       <h3>この商品の口コミはまだありません。</h3>
     <% end %>
   </div>
-  <% if current_user.admin? %>
-  <% end %>
 </div>

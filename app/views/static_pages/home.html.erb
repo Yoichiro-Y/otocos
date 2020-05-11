@@ -1,6 +1,10 @@
 <% if logged_in? %>
   <div class="row">
     <div class="col-md-8">
+      <% if @article %>
+      <% else %>
+      <h2>記事はまだありません</h2>
+      <% end %>
     </div>
     <aside class="col-md-4">
       <section class="user_info">
@@ -12,25 +16,38 @@
       <div class="side-menu">
         <p class="mini-title">口コミを探す</p>
          <ul>
-          <li><%= link_to "> カテゴリーから探す","#" %></li>
-          <li><%= link_to "> ブランドから探す","brands_path" %></li>
-          <li><%= link_to "> ランキングから探す","#" %></li>
-          <li><%= link_to "> 新着商品から探す","products_path" %></li>
-          <li><%= link_to "> 記事から探す","#" %></li>
-          <li><%= link_to "> 注目商品から探す","#" %></li>
+          <li><%= link_to "> カテゴリーから探す","#",class:"nomal-link" %></li>
+          <li><%= link_to "> ブランドから探す",brands_path,class:"nomal-link"  %></li>
+          <li><%= link_to "> ランキングから探す","#",class:"nomal-link" %></li>
+          <li><%= link_to "> 新着商品から探す",products_path,class:"nomal-link" %></li>
+          <li><%= link_to "> 記事から探す","#",class:"nomal-link" %></li>
+          <li><%= link_to "> ユーザーから探す",users_path,class:"nomal-link" %></li>
+        </ul>
+        <p class="mini-title">人気のブランド</p>
+        <ul>
+          <li><%= link_to "> ブランドA","#",class:"nomal-link" %></li>
+          <li><%= link_to "> ブランドB","#",class:"nomal-link"  %></li>
+          <li><%= link_to "> ブランドC","#",class:"nomal-link" %></li>
+          <li><%= link_to "> ブランドD","#",class:"nomal-link" %></li>
         </ul>
       </div>
     </aside>
   </div>
 <% else %>
+ <div class="big-bg">
   <div class="center explain">
-    <h1>Welcome to FLYB !</h1>
-    <p>FLYB(フライビー)は男性向けの化粧品・コスメの口コミ情報サイトです。</p>
+    <h1>Welcome to OTOCOS !</h1>
+    <p>OTOCOS(オトコス)は男性向けの化粧品・コスメの口コミ情報サイトです。</p>
     <p>あなたにあった化粧品・コスメを見つけましょう。</p>
     <ul class="home-btns">
         <li><%= link_to "カテゴリ", users_path , class: "home-btn"%></li>
-        <li><%= link_to "ランキング", users_path, class: "home-btn" %></li>
-        <li><%= link_to "新着コスメ", users_path, class: "home-btn" %></li>
+        <li><%= link_to "ブランド", brands_path, class: "home-btn" %></li>
+        <li><%= link_to "新着コスメ", products_path, class: "home-btn" %></li>
     </ul>
   </div>
+ </div>
+ <% if @article %>
+ <% else %>
+    <h2>記事はまだありません</h2>
+  <% end %>
 <% end %>

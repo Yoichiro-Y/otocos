@@ -1,0 +1,23 @@
+
+.products {
+  list-style: none;
+  margin: 0;
+  color:#80796c;
+  .container{
+    display:flex;
+  }
+  li {
+    overflow: auto;
+    padding: 3px 0;
+    border-bottom: 1px solid gray-lighter;
+  }
+  .brand-explain{
+    color:black;
+    font-family:serif;
+    font-size:15px;
+  }
+  img{
+    width:200px;
+    margin:40px 10px 0 0;
+  }
+}

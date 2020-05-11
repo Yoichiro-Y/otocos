@@ -7,10 +7,10 @@ class MicropostsController < ApplicationController
         @micropost.image.attach(params[:micropost][:image])
         if @micropost.save
           flash[:success] = "投稿が完了しました"
-          redirect_to root_url
+          redirect_to request.referrer || root_url
         else
           @feed_items = current_user.feed.paginate(page: params[:page])
-          render 'static_pages/home'
+          raise
         end
     end
     
@@ -23,7 +23,7 @@ class MicropostsController < ApplicationController
     private
 
       def micropost_params
-        params.require(:micropost).permit(:content,:image)
+        params.require(:micropost).permit(:content,:image,:product_id)
       end
       
       def correct_user

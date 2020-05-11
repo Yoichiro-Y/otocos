@@ -1,0 +1,20 @@
+<li id="product-<%= product.id %>">
+ 
+  <span class="content products">
+    <ul>
+      <li class="brand-name"><%= product.name %></li>
+      <% if @user && current_user.admin %>
+      <%= link_to "削除", product, method: :delete,
+                                       data: { confirm: "削除しますか" },class:"default-link" %>
+      <% end %>
+      <div class="item"><%= image_tag product.image_name if product.image_name.attached? %></div>
+      <div calss="item">
+            <li class="brand-explain">ブランド　<%= link_to product.brand.name, @brand,class:"black" %></li>
+            <li  class="brand-explain">カテゴリ　<%= product.category %></li>
+            <li class="brand-explain">参考価格　<%= product.price %>円</li>
+            <li class="brand-explain"> 商品説明　<%= product.explain %>  </li>
+      </div>
+      <li ><%= link_to "#{product.name}の口コミを見る",product,class:"default-link" %></li>
+    </ul>
+  </span>
+</li>

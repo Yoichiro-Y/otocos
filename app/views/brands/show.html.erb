@@ -13,13 +13,14 @@
       </div>
     </div>
   </aside>
-   <div class="col-md-8">
+   <div class="col-md-8 ">
     <% if @brand.products.any? %>
       <h3>商品一覧 (<%= @brand.products.count %>件)</h3>
       <ol class="microposts">
+        <%= render @products %>
       </ol>
+    <% else %>
+      <h3>まだ商品が登録されていません。</h3>
     <% end %>
   </div>
-  <% if current_user.admin? %>
-  <% end %>
 </div>

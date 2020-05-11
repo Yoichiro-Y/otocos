@@ -1,15 +1,15 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
     <%= link_to root_path, id: "logo" do %>
-      <%= image_tag "A984CB32-4AB7-4FD3-92D2-DFE11714D8F6_1_105_c.jpeg",class: "logo-img" %>
-      F L Y B
+      <%= image_tag "icon_115500_256.png",class: "logo-img" %>
+      OTOCOS
     <% end %>
     
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li ><%= link_to "ホーム",   root_path ,class:"black-btn" %></li>
-        <li ><%= link_to "新着商品",   products_path,class:"orange-btn" %></li>
         <% if logged_in? %>
+          <li ><%= link_to "新着商品",   products_path,class:"orange-btn" %></li>
           <li ><%= link_to "ブランド", brands_path,class:"black-btn" %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -25,6 +25,7 @@
             </ul>
           </li>
         <% else %>
+          <li ><%= link_to "新規登録",   signup_path,class:"orange-btn" %></li>
           <li><%= link_to "ログイン", login_path ,class:"black-btn"%></li>
         <% end %>
       </ul>
